@@ -1,0 +1,13 @@
+# Ignore python cache
+__pycache__/
+*.pyc
+
+# Ignore temporary audio files
+*.wav
+*.mp3
+
+# Ignore Generated PDFs
+*.pdf
+
+# Ignore system files
+.DS_Store
