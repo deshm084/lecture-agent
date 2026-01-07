@@ -54,6 +54,24 @@ cd lecture-agent
 
 pip install -r requirements.txt
 
+
+
+That closing triple backtick \*\*must exist\*\*.
+
+
+
+---
+
+
+
+\## Step 3️⃣ Paste screenshots section \*\*after\*\* the code block
+
+Immediately \*\*after\*\* the closed code block, paste:
+
+
+
+```markdown
+
 \## 🖥 Demo Screenshots
 
 
@@ -67,6 +85,54 @@ pip install -r requirements.txt
 \### Q\&A Agent – Grounded Question Answering
 
 !\[Q\&A Agent](assets/lecture-agent-qa-agent.png)
+
+
+
+---
+
+
+
+\## Step 4️⃣ Save and close Notepad
+
+\- Press \*\*Ctrl + S\*\*
+
+\- Close Notepad
+
+
+
+---
+
+
+
+\## Step 5️⃣ Make sure images exist in the right place
+
+In File Explorer, verify this path exists:
+
+
+
+⚠️ Filenames must match \*\*exactly\*\* (case + spelling).
+
+
+
+---
+
+
+
+\## Step 6️⃣ Commit and push the fix
+
+Back in the terminal:
+
+
+
+```bat
+
+git add README.md
+
+git commit -m "Fix README formatting and render demo screenshots"
+
+git push
+
+
 
 
 
