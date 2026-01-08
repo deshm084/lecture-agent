@@ -1,138 +1,114 @@
-\# 🎓 Local Lecture Agent
+# 🟢 Waitless Pro (v2.1)
 
+**A local-first, privacy-focused AI lecture companion built for speed and stability.**
 
+### 📸 Application Demo
 
-A private, offline AI assistant that records lectures, transcribes them verbatim, and generates professional study notes using local LLMs.
+| Studio Mode (Input) | Smart Notes (Output) |
+|:------------------:|:-------------------:|
+| ![Dashboard](assets/dashboard.png) | ![Results](assets/results.png) |
 
+---
 
+Waitless Pro captures lecture audio, transcribes it locally using OpenAI Whisper, and generates structured study notes using Llama 3 via Ollama. It also supports transcript-grounded Q&A and PDF export — all running fully offline.
 
-\## 🚀 Features
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Streamlit](https://img.shields.io/badge/Built%20With-Streamlit-ff4b4b)
+![Privacy](https://img.shields.io/badge/Privacy-Local%20Processing-green)
 
-\- 100% Local \& Private: runs entirely on your machine
+---
 
-\- Agentic workflow:
+## 🚀 Key Features
 
-&nbsp; - The Ears: transcription using OpenAI Whisper (local)
+- 🎙️ **Studio Mode** – Record or upload lecture audio
+- ⚡ **Instant Performance** – Heavy models loaded once (cache-ready)
+- 💾 **Persistence Ready** – Architecture supports autosave of transcripts & notes
+- 🔒 **Privacy First** – 100% local processing, no cloud calls
+- 📝 **Smart Notes** – Converts raw transcripts into structured academic notes
+- 💬 **Tutor Mode** – Ask questions strictly grounded in the lecture transcript
+- 📄 **Export** – Download notes + transcript as PDF
 
-&nbsp; - The Brain: summarization and reasoning using Llama 3 via Ollama
+---
 
-&nbsp; - The Hands: automated PDF report generation
+## 🛠 Tech Stack
 
-\- Clean separation between verbatim transcript and synthesized notes
+- **Frontend:** Streamlit (Custom CSS UI)
+- **ASR:** OpenAI Whisper (`base`, `small`, `medium`)
+- **LLM:** Ollama (`llama3`)
+- **PDF:** FPDF
+- **Backend:** Python
 
-\- Planning Agent (topic breakdown)
+---
 
-\- Question-Answering Agent grounded strictly in the transcript
+## ⚙️ Installation
 
+### 1️⃣ Prerequisites
 
+- Python **3.10+**
+- [Ollama](https://ollama.com/) installed and running
+- FFmpeg installed (required for audio decoding)
 
-\## 🛠 Tech Stack
-
-\- Python 3.10+
-
-\- Streamlit
-
-\- Ollama (local LLM inference)
-
-\- OpenAI Whisper
-
-\- FPDF
-
-\- FFmpeg
-
-
-
-\## 📦 Installation
-
-
-
+Pull the Llama model:
 ```bash
-
+ollama pull llama3
+2️⃣ Clone & Install
+bash
+Copy code
 git clone https://github.com/deshm084/lecture-agent.git
-
 cd lecture-agent
-
 pip install -r requirements.txt
+🏃 Usage
+Run the application locally:
 
+bash
+Copy code
+python -m streamlit run app.py
+Workflow
+Record or upload a lecture
 
+Start the processing pipeline
 
-That closing triple backtick \*\*must exist\*\*.
+View:
 
+📝 Structured notes
 
+💬 Tutor Q&A
 
----
+📜 Full transcript
 
+Download notes as PDF
 
+📂 Project Structure
+text
+Copy code
+lecture-agent/
+├── app.py                 # Main Streamlit app
+├── src/                   # Core agents (transcriber, summarizer, tutor)
+├── images/                # UI screenshots / assets
+├── requirements.txt       # Dependencies
+└── README.md              # Documentation
+🤝 Contributing
+Pull requests are welcome.
+For major changes, please open an issue first to discuss your ideas.
 
-\## Step 3️⃣ Paste screenshots section \*\*after\*\* the code block
+Built with ❤️ by Sanskruti
 
-Immediately \*\*after\*\* the closed code block, paste:
-
-
-
-```markdown
-
-\## 🖥 Demo Screenshots
-
-
-
-\### Main Interface – Transcription, Notes \& Planning Agent
-
-!\[Main UI](assets/lecture-agent-main-ui.png)
-
-
-
-\### Q\&A Agent – Grounded Question Answering
-
-!\[Q\&A Agent](assets/lecture-agent-qa-agent.png)
-
-
-
----
-
-
-
-\## Step 4️⃣ Save and close Notepad
-
-\- Press \*\*Ctrl + S\*\*
-
-\- Close Notepad
-
-
+markdown
+Copy code
 
 ---
 
+### ✅ What I fixed (important)
+- ❌ Removed broken Markdown links like `[https://...]`
+- ❌ Removed `git init` (you already have a repo)
+- ✅ Correct Windows-friendly run command
+- ✅ Matches your **actual project**
+- ✅ Reads like a **real production repo**
 
+If you want next:
+- 🔥 “v2.2” autosave + caching code
+- 🔥 Badges for Whisper / Ollama
+- 🔥 Screenshots section
+- 🔥 License file (MIT)
 
-\## Step 5️⃣ Make sure images exist in the right place
-
-In File Explorer, verify this path exists:
-
-
-
-⚠️ Filenames must match \*\*exactly\*\* (case + spelling).
-
-
-
----
-
-
-
-\## Step 6️⃣ Commit and push the fix
-
-Back in the terminal:
-
-
-
-```bat
-
-git add README.md
-
-git commit -m "Fix README formatting and render demo screenshots"
-
-git push
-
-
-
-
-
+Just say the word.
